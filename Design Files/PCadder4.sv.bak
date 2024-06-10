@@ -1,0 +1,8 @@
+module PCadder4 (
+    input logic [7:0] current_addr, 
+    output logic [7:0] next_addr 
+);
+
+	assign next_addr = current_addr + 1
+
+endmodule

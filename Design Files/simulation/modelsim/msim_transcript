@@ -1,0 +1,237 @@
+# Reading pref.tcl
+# do Processor_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+D:/Academic/Sem\ 5/Digital\ System\ Design/200537F_DesignFiles {D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Controller.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:24:10 on Dec 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles" D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Controller.sv 
+# -- Compiling module Controller
+# 
+# Top level modules:
+# 	Controller
+# End time: 01:24:10 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/Academic/Sem\ 5/Digital\ System\ Design/200537F_DesignFiles {D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/RegisterFile.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:24:10 on Dec 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles" D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/RegisterFile.sv 
+# -- Compiling module RegisterFile
+# 
+# Top level modules:
+# 	RegisterFile
+# End time: 01:24:10 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/Academic/Sem\ 5/Digital\ System\ Design/200537F_DesignFiles {D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/DataMemory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:24:10 on Dec 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles" D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/DataMemory.sv 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 01:24:10 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/Academic/Sem\ 5/Digital\ System\ Design/200537F_DesignFiles {D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/ALU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:24:10 on Dec 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles" D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 01:24:10 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/Academic/Sem\ 5/Digital\ System\ Design/200537F_DesignFiles {D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/ProgramCounter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:24:11 on Dec 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles" D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/ProgramCounter.sv 
+# -- Compiling module ProgramCounter
+# 
+# Top level modules:
+# 	ProgramCounter
+# End time: 01:24:11 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/Academic/Sem\ 5/Digital\ System\ Design/200537F_DesignFiles {D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/PCadder4.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:24:11 on Dec 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles" D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/PCadder4.sv 
+# -- Compiling module PCadder4
+# 
+# Top level modules:
+# 	PCadder4
+# End time: 01:24:11 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/Academic/Sem\ 5/Digital\ System\ Design/200537F_DesignFiles {D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/InstructionMemory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:24:11 on Dec 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles" D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/InstructionMemory.sv 
+# -- Compiling module InstructionMemory
+# 
+# Top level modules:
+# 	InstructionMemory
+# End time: 01:24:11 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/Academic/Sem\ 5/Digital\ System\ Design/200537F_DesignFiles {D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/ImmediateGenerator.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:24:11 on Dec 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles" D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/ImmediateGenerator.sv 
+# -- Compiling module ImmediateGenerator
+# 
+# Top level modules:
+# 	ImmediateGenerator
+# End time: 01:24:11 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/Academic/Sem\ 5/Digital\ System\ Design/200537F_DesignFiles {D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/DataExtract.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:24:11 on Dec 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles" D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/DataExtract.sv 
+# -- Compiling module DataExtract
+# 
+# Top level modules:
+# 	DataExtract
+# End time: 01:24:11 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/Academic/Sem\ 5/Digital\ System\ Design/200537F_DesignFiles {D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Mux2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:24:11 on Dec 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles" D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Mux2.sv 
+# -- Compiling module Mux2
+# 
+# Top level modules:
+# 	Mux2
+# End time: 01:24:11 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/Academic/Sem\ 5/Digital\ System\ Design/200537F_DesignFiles {D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Mux3.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:24:11 on Dec 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles" D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Mux3.sv 
+# -- Compiling module Mux3
+# 
+# Top level modules:
+# 	Mux3
+# End time: 01:24:11 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/Academic/Sem\ 5/Digital\ System\ Design/200537F_DesignFiles {D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/AddressDecorder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:24:11 on Dec 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles" D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/AddressDecorder.sv 
+# -- Compiling module AddressDecorder
+# 
+# Top level modules:
+# 	AddressDecorder
+# End time: 01:24:11 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/Academic/Sem\ 5/Digital\ System\ Design/200537F_DesignFiles {D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/DataPath.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:24:11 on Dec 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles" D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/DataPath.sv 
+# -- Compiling module DataPath
+# 
+# Top level modules:
+# 	DataPath
+# End time: 01:24:11 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/Academic/Sem\ 5/Digital\ System\ Design/200537F_DesignFiles {D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Adder32.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:24:11 on Dec 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles" D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Adder32.sv 
+# -- Compiling module Adder32
+# 
+# Top level modules:
+# 	Adder32
+# End time: 01:24:11 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/Academic/Sem\ 5/Digital\ System\ Design/200537F_DesignFiles {D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/hexdigit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:24:11 on Dec 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles" D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/hexdigit.sv 
+# -- Compiling module hexdigit
+# 
+# Top level modules:
+# 	hexdigit
+# End time: 01:24:11 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/Academic/Sem\ 5/Digital\ System\ Design/200537F_DesignFiles {D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/try.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:24:11 on Dec 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles" D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/try.sv 
+# -- Compiling module try
+# 
+# Top level modules:
+# 	try
+# End time: 01:24:11 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/Academic/Sem\ 5/Digital\ System\ Design/200537F_DesignFiles {D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:24:11 on Dec 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles" D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/tb.sv 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 01:24:12 on Dec 01,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+D:/Academic/Sem\ 5/Digital\ System\ Design/200537F_DesignFiles {D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:24:12 on Dec 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles" D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/tb.sv 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 01:24:12 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tb 
+# Start time: 01:24:12 on Dec 01,2023
+# Loading sv_std.std
+# Loading work.tb
+# Loading work.try
+# Loading work.DataPath
+# Loading work.Mux2
+# Loading work.PCadder4
+# Loading work.ProgramCounter
+# Loading work.InstructionMemory
+# Loading work.ImmediateGenerator
+# Loading work.Adder32
+# Loading work.RegisterFile
+# Loading work.DataExtract
+# Loading work.ALU
+# Loading work.DataMemory
+# Loading work.Mux3
+# Loading work.AddressDecorder
+# Loading work.Controller
+# Loading work.hexdigit
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+add wave -position end  sim:/tb/dut/dp/dataExtStore/y
+add wave -position end  sim:/tb/dut/dp/alu/ALUout
+restart
+run
+run
+run -all
+# Process sim:/tb/#INITIAL#27 no longer exists
+add wave -position end  sim:/tb/dut/H2/in
+add wave -position end  sim:/tb/dut/H2/out
+restart
+run -all
+# Break key hit
+# Simulation stop requested.
+# End time: 01:37:07 on Dec 01,2023, Elapsed time: 0:12:55
+# Errors: 0, Warnings: 0

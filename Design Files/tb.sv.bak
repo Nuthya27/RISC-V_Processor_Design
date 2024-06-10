@@ -1,0 +1,40 @@
+`timescale 1ns/1ps
+
+module try_tb;
+
+    // Inputs
+    reg clk;
+    reg reset;
+    reg [4:0] sw;
+
+    // Outputs
+    wire [6:0] HEX4;
+
+    // Instantiate the module under test
+    try uut (
+        .clk(clk),
+        .reset(reset),
+        .sw(sw),
+        .HEX4(HEX4)
+    );
+
+    // Clock generation
+    initial begin
+        clk = 0;
+        forever #5 clk = ~clk;
+    end
+
+    // Initial stimulus
+    initial begin
+        // Initialize inputs
+        reset = 0;
+        sw = 5'b00000;
+
+        // Apply some test vectors
+        #10 sw = 5'b00001;  // Assuming this is a positive edge-triggered signal
+        #10 sw = 5'b00010;
+        #10 sw = 5'b00100;
+
+    end
+
+endmodule

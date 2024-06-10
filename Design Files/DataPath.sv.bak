@@ -1,0 +1,23 @@
+module DataPath(
+	input logic clk,
+	input logic rst,
+	input logic [3:0] aluOp,
+	input logic [2:0] immSel,
+	input logic [1:0] wrbk,
+	input logic aluA, aluB, memWrEn, regWrEn, pcSel
+
+);
+
+
+
+Mux2 pcMux(.d0(),.d1(),.sel(),.y());
+
+ProgramCounter	pc(.clk(),.rst(),.next_addr(),.current_addr());
+
+PCadder4	pcAdd4(.current_addr(),.next_addr());
+
+InstructionMemory insMem(.ins_addr(),.instruction())
+
+ImmediateGenerator immGen(.ins(),.imm_sel(),.imm_out())
+
+RegisterFile regFile(.clk(),.rst(),.reg_wr_en(),.wr_reg)

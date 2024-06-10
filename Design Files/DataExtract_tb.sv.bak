@@ -1,0 +1,79 @@
+module DataExtract_tb;
+
+    reg [31:0] inst;
+    reg [31:0] data;
+    wire [31:0] y;
+
+    DataExtract dut (
+        .inst(inst),
+        .data(data),
+        .y(y)
+    );
+
+    // Stimulus generation
+    initial begin
+        // Test case 1: Load byte (lb)
+        inst = 7'b0000011;  // Load instruction
+        data = 32'hFFFFFF00;  // Data value to be extracted
+        #10;
+        if (y !== 32'hFFFFFF00) $display("Test case 1 failed!");
+
+        // Test case 2: Load halfword (lh)
+        inst = 7'b0000011;  // Load instruction
+        data = 32'hFFFF0000;  // Data value to be extracted
+        #10;
+        if (y !== 32'hFFFF0000) $display("Test case 2 failed!");
+
+        // Test case 3: Load byte unsigned (lbu)
+        inst = 7'b0000011;  // Load instruction
+        data = 32'h000000FF;  // Data value to be extracted
+        #10;
+        if (y !== 32'h000000FF) $display("Test case 3 failed!");
+
+        // Test case 4: Load halfword unsigned (lhu)
+        inst = 7'b0000011;  // Load instruction
+        data = 32'h0000FFFF;  // Data value to be extracted
+        #10;
+        if (y !== 32'h0000FFFF) $display("Test case 4 failed!");
+
+        // Test case 5: Load word (lw)
+        inst = 7'b0000011;  // Load instruction
+        data = 32'hA5A5A5A5;  // Data value to be extracted
+        #10;
+        if (y !== 32'hA5A5A5A5) $display("Test case 5 failed!");
+
+        // Test case 6: Store byte (sb)
+        inst = 7'b0100011;  // Store instruction
+        data = 32'h000000FF;  // Data value to be extracted
+        #10;
+        if (y !== 32'h000000FF) $display("Test case 6 failed!");
+
+        // Test case 7: Store halfword (sh)
+        inst = 7'b0100011;  // Store instruction
+        data = 32'h0000FFFF;  // Data value to be extracted
+        #10;
+        if (y !== 32'h0000FFFF) $display("Test case 7 failed!");
+
+        // Test case 8: Store word (sw)
+        inst = 7'b0100011;  // Store instruction
+        data = 32'hA5A5A5A5;  // Data value to be extracted
+        #10;
+        if (y !== 32'hA5A5A5A5) $display("Test case 8 failed!");
+
+        // Finish simulation
+        $finish;
+    end
+
+endmodule
+
+initial begin
+    $dumpfile("DataExtract_tb.vcd");
+    $dumpvars(0, DataExtract_tb);
+    $display("Starting testbench...");
+    $monitor("At time %t: y = %h", $realtime, DataExtract_tb.y);
+end
+
+// Simulate the testbench
+DataExtract_tb tb();
+
+endmodule

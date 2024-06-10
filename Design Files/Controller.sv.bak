@@ -1,0 +1,68 @@
+module Controller(
+  input logic clk, // Clock input
+  input logic reset, // Reset input
+  input logic [31:0] ins, // Input opcode
+  input logic blt,bgt,zero,
+  output wire [1:0] alu_op, reg_dst, mem_to_reg,
+  output wire jump, beq, bne, mem_read, mem_write, alu_src, reg_write, sign_or_zero
+);
+
+  // Control Memory (ROM) to store microinstructions
+  logic [6:0] control_mem_addr;
+  reg [13:0] control_memory [63:0]; // 64x16 control memory (64 opcodes, 16 control signals)
+  logic [6:0] opcode;
+  logic [2:0] funct3;
+  logic [6:00 funct7;
+  
+  assign opcode = ins[6:0];
+  assign funct3 = ins[14:12];
+  assign funct7 = ins[31:25];
+  
+
+  // Microprogram for different opcodes
+  initial begin
+    // Microprogram for opcode 000000 (LW)
+    control_memory[6'b000000] = 16'b0010000001001001; // Sample microinstruction
+
+    // Microprogram for opcode 000001 (SW)
+    control_memory[6'b000001] = 16'b0011000000010010; // Sample microinstruction
+
+    // Define microprograms for other opcodes
+    // ...
+
+  end
+
+  // Control Unit
+  always @(posedge clk or posedge reset) begin
+    if (reset) begin
+      // Reset control signals
+      alu_op <= 2'b00;
+      reg_dst <= 2'b00;
+      mem_to_reg <= 2'b00;
+      jump <= 1'b0;
+      beq <= 1'b0;
+      bne <= 1'b0;
+      mem_read <= 1'b0;
+      mem_write <= 1'b0;
+      alu_src <= 1'b0;
+      reg_write <= 1'b0;
+      sign_or_zero <= 1'b0;
+    end else begin
+      // Fetch the microinstruction from the control memory
+      wire [15:0] microinstruction = control_memory[opcode];
+
+      // Set the control signals based on the microinstruction
+      alu_op <= microinstruction[15:14];
+      reg_dst <= microinstruction[13:12];
+      mem_to_reg <= microinstruction[11:10];
+      jump <= microinstruction[9];
+      beq <= microinstruction[8];
+      bne <= microinstruction[7];
+      mem_read <= microinstruction[6];
+      mem_write <= microinstruction[5];
+      alu_src <= microinstruction[4];
+      reg_write <= microinstruction[3];
+      sign_or_zero <= microinstruction[2];
+    end
+  end
+endmodule

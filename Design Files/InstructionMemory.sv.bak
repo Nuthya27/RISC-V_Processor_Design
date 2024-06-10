@@ -1,0 +1,61 @@
+module InstructionMemory(
+
+    input logic [7:0] ins_addr,
+    output logic [31:0] instruction
+	 
+);
+
+    logic [31:0] ROM[255:0];
+
+    initial
+		begin
+			//R type
+			ROM[0] = 32'h00000033;  //addi
+			ROM[1] = 32'h40000033;	//sub
+			ROM[2] = 32'h00002033;	//slt
+			ROM[3] = 32'h00003033;	//sltu
+			ROM[4] = 32'h00004033;	//xor
+			ROM[5] = 32'h00006033;	//or
+			ROM[6] = 32'h00007033;	//and
+			ROM[7] = 32'h00001033;	//sll
+			ROM[8] = 32'h00005033;	//srl
+			ROM[9] = 32'h40005033;	//sra
+			
+			//I type
+			ROM[10] = 32'h00000013;	//addi
+			ROM[11] = 32'h00002013;	//slti
+			ROM[12] = 32'h00003013;	//stliu
+			ROM[13] = 32'h00004013;	//xori
+			ROM[14] = 32'h00006013;	//ori
+			ROM[15] = 32'h00007013;	//andi
+			ROM[16] = 32'h00001013;	//slli
+			ROM[17] = 32'h00005013;	//srli
+			ROM[18] = 32'h40005013;	//srai
+			
+			//Load I type
+			ROM[19] = 32'h00000003; //lb
+			ROM[20] = 32'h00001003;	//lh
+			ROM[21] = 32'h00002003;	//lw
+			ROM[22] = 32'h00004003;	//lbu
+			ROM[23] = 32'h00005003;	//lhu
+			
+			//Store S type
+			ROM[24] = 32'h00000023;	//sb
+			ROM[25] = 32'h00001023;	//sh
+			ROM[26] = 32'h00002023;	//sw
+			
+			//SB type
+			ROM[27] = 32'h00000063;	//beq
+			ROM[28] = 32'h00001063;	//bne
+			ROM[29] = 32'h00004063;	//blt
+			ROM[30] = 32'h00005063;	//bge
+			ROM[31] = 32'h00006063;	//bltu
+			ROM[32] = 32'h00007063;	//bgeu
+
+			//MEMCOPY
+			//MUL
+
+
+    assign instruction = ROM[ins_addr];
+
+endmodule

@@ -1,0 +1,40 @@
+module DataExtract(
+	input logic [31:0] inst,
+	input logic [31:0] data,
+	output logic [31:0] y
+);
+
+	logic [15:0] s_bit;
+	logic [7:0] e_bit;
+	assign s_bit = data[15:0];
+	assign e_bit = data[7:0];
+ 
+always_comb
+	begin
+	y=32'b0;
+			if(inst[6:0] == 7'b0000011)  //Load
+				begin
+					if(inst[14:12] == 3'b000)	//lb
+						y = {e_bit[7]? {24{1'b1}}:{24{1'b0}}, e_bit};
+					else if(inst[14:12] == 3'b001)	//lh
+						y = {s_bit[15]? {16{1'b1}}:{16{1'b0}}, s_bit};
+					else if(inst[14:12] == 3'b100)	//lbu
+						y = {24'b0, e_bit};
+					else if(inst[14:12] == 3'b101)	//lhu
+						y = {16'b0, s_bit};
+					else if(inst[14:12] == 3'b010)	//lw
+						y = data;
+				end
+			else if(inst[6:0] == 7'b0100011)	//Store
+				begin
+					if(inst[14:12] == 3'b000)	//sb
+						y = {e_bit[7]? {24{1'b1}}:{24{1'b0}}, e_bit};
+					else if(inst[14:12] == 3'b001)	//sh
+						y = {s_bit[15]? {16{1'b1}}:{16{1'b0}}, s_bit};
+					else if(inst[14:12] == 3'b010)	//sw	
+						y = data;
+				end
+			else y=data;
+	end
+
+endmodule

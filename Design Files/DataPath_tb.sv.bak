@@ -1,0 +1,80 @@
+`timescale 1ns / 1ps
+
+module DataPath_tb;
+
+  // Inputs
+  reg clock;
+  reg reset;
+  reg [3:0] aluOp;
+  reg [2:0] immSel;
+  reg [1:0] wrbk;
+  reg aluA;
+  reg aluB;
+  reg memWrEn;
+  reg regWrEn;
+  reg pcSel;
+
+  // Outputs
+  wire [15:0] instr;  // Connect this to your DataPath module's instruction input
+  wire [31:0] wrData; // Connect this to your DataPath module's wr_data output
+  wire [31:0] rdData1; // Connect this to your DataPath module's rd_data1 output
+  wire [31:0] rdData2; // Connect this to your DataPath module's rd_data2 output
+
+  // Instantiate the DataPath module
+  DataPath dp(
+    .clock(clock),
+    .reset(reset),
+    .aluOp(aluOp),
+    .immSel(immSel),
+    .wrbk(wrbk),
+    .aluA(aluA),
+    .aluB(aluB),
+    .memWrEn(memWrEn),
+    .regWrEn(regWrEn),
+    .pcSel(pcSel),
+    .instr(instr),
+    .wrData(wrData),
+    .rdData1(rdData1),
+    .rdData2(rdData2)
+  );
+
+  // Testbench stimulus
+  initial begin
+    // Initialize inputs
+    clock = 0;
+    reset = 0;
+    aluOp = 4'b0000;  // Set your desired ALU operation code for R-type instruction
+    immSel = 3'b000;  // Set your desired immediate selection code
+    wrbk = 2'b01;     // Set your desired write-back code
+    aluA = 0;
+    aluB = 0;
+    memWrEn = 0;
+    regWrEn = 1;
+    pcSel = 0;
+
+    // Load an R-type instruction into the instruction memory
+    instr = 16'hADD_RD1_RD2_WR3;
+
+    // Apply reset
+    reset = 1;
+    #10 reset = 0;
+
+    // Clock the DataPath module and simulate the execution of the instruction
+    // You may need to adjust the timing and inputs based on your design
+    // For example, you might want to add more clock cycles for the execution.
+    #10 clock = 1;
+    #10 clock = 0;
+    // Add more clock cycles for execution as needed
+
+    // Add assertions to check the output values after instruction execution
+    // For example, you can check wrData, rdData1, and rdData2 to verify the result.
+
+    // End simulation
+    $finish;
+  end
+
+  always begin
+    #5 clock = ~clock; // Toggle the clock every 5 ns
+  end
+
+endmodule

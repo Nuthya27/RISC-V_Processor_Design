@@ -1,0 +1,44 @@
+module InstructionMemory_tb;
+
+    // Inputs
+    reg [7:0] ins_addr;
+    // Outputs
+    wire [31:0] instruction;
+    
+    // Instantiate the module under test
+    InstructionMemory uut (
+        .ins_addr(ins_addr),
+        .instruction(instruction)
+    );
+
+    // Clock generation
+    reg clk = 0;
+    always begin
+        #5 clk = ~clk;
+    end
+
+    // Test input generation
+    initial begin
+        ins_addr = 8'h00; // Test with different instruction addresses
+        #10 ins_addr = 8'h01;
+        #10 ins_addr = 8'h0A;
+        // Add more test cases as needed
+        $finish;
+    end
+
+    // Monitor the outputs
+    always @(posedge clk) begin
+        $display("ins_addr = %h, instruction = %h", ins_addr, instruction);
+        // Add more output monitoring if needed
+    end
+
+endmodule
+
+// Simulation
+initial begin
+    $dumpfile("InstructionMemory_tb.vcd");
+    $dumpvars(0, InstructionMemory_tb);
+    $display("Starting simulation");
+    $monitor($time, "", $time, " ns");
+    #20 $finish;
+end

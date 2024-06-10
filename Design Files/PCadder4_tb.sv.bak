@@ -1,0 +1,23 @@
+module PCadder4_tb;
+
+  // Inputs
+  logic [7:0] current_addr;
+
+  // Outputs
+  logic [7:0] next_addr;
+
+  // Instantiate the module under test
+  PCadder4 dut (
+    .current_addr(current_addr),
+    .next_addr(next_addr)
+  );
+
+  // Define test parameters
+  initial begin
+    // Initialize signals
+    current_addr = 8'b00000000;
+
+    $finish;
+  end
+
+endmodule

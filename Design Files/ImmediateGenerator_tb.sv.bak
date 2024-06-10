@@ -1,0 +1,64 @@
+module ImmediateGenerator_tb;
+
+  reg [31:0] ins;
+  reg [2:0] imm_sel;
+  wire [31:0] imm_out;
+
+  // Instantiate the ImmediateGenerator module
+  ImmediateGenerator dut (
+    .ins(ins),
+    .imm_sel(imm_sel),
+    .imm_out(imm_out)
+  );
+
+  // Define the clock signal
+  reg clk = 0;
+  always begin
+    #5 clk = ~clk;
+  end
+
+  // Initialize signals
+  initial begin
+    ins = 32'h12345678; // Example input value
+    imm_sel = 3'b000;  // Test with different imm_sel values
+
+    // Test case 1: imm_sel = 000 (signed)
+    // Expected output: imm_out = {1'b0, ins[31], 20'b1, ins[31:20]}
+    $display("Test case 1: imm_sel = 000 (signed)");
+    $monitor("imm_out = %h", imm_out);
+    #10;
+    if (imm_out !== {1'b0, ins[31], 20'b1, ins[31:20]}) $display("Test case 1 failed!");
+
+    // Test case 2: imm_sel = 001 (unsigned)
+    // Expected output: imm_out = {27'b0, ins[24:20]}
+    $display("Test case 2: imm_sel = 001 (unsigned)");
+    imm_sel = 3'b001;
+    $monitor("imm_out = %h", imm_out);
+    #10;
+    if (imm_out !== {27'b0, ins[24:20]}) $display("Test case 2 failed!");
+
+    // Repeat for other test cases...
+
+    $finish;
+  end
+
+  // Clock generation
+  always begin
+    #5 clk = ~clk;
+  end
+
+endmodule
+
+// Simulate the test bench
+initial begin
+  $dumpfile("ImmediateGenerator_tb.vcd");
+  $dumpvars(0, ImmediateGenerator_tb);
+
+  // Run the simulation for a sufficient number of time units
+  #100;
+
+  $display("Simulation finished.");
+  $finish;
+end
+
+endmodule

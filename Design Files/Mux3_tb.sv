@@ -1,0 +1,32 @@
+module Mux3_tb;
+
+  logic [31:0] d0, d1, d2;
+  logic [1:0] sel;
+  logic [31:0] y;
+
+  Mux3 dut (
+    .d0(d0),
+    .d1(d1),
+	 .d2(d2),
+    .sel(sel),
+    .y(y)
+  );
+
+  initial begin
+
+    d0 = 32'h01234567;
+    d1 = 32'h89ABCDEF;
+	 d2 = 32'h106B1B68;
+    sel = 2'b00;
+
+    #10;
+    sel = 2'b01; 
+    #10; 
+	 
+    sel = 2'b10; 
+    #10;
+
+  end
+
+
+endmodule

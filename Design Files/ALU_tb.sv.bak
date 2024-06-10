@@ -1,0 +1,152 @@
+module ALU_tb;
+
+  // Define constants for ALU operation codes
+  localparam [3:0] ADD = 4'b0000;
+  localparam [3:0] SUB = 4'b0001;
+  localparam [3:0] SLL = 4'b0010;
+  localparam [3:0] SRL = 4'b0011;
+  localparam [3:0] SRA = 4'b0100;
+  localparam [3:0] AND = 4'b0101;
+  localparam [3:0] OR  = 4'b0110;
+  localparam [3:0] XOR = 4'b0111;
+  localparam [3:0] SLT = 4'b1000;
+  localparam [3:0] SLTU = 4'b1001;
+  localparam [3:0] BEQ = 4'b1010;
+  localparam [3:0] BNE = 4'b1011;
+  localparam [3:0] BGE = 4'b1100;
+  localparam [3:0] BGEU = 4'b1101;
+
+  // Define test vectors
+  reg [31:0] A, B;
+  reg [3:0] ALUop;
+  wire [31:0] ALUout;
+  wire ZeroFlag;
+
+  // Instantiate the ALU module
+  ALU uut (
+    .A(A),
+    .B(B),
+    .ALUop(ALUop),
+    .ALUout(ALUout),
+    .ZeroFlag(ZeroFlag)
+  );
+
+  // Clock generation
+  reg clk = 0;
+  always #5 clk = ~clk;
+
+  // Test vectors
+  initial begin
+    // Test Case 1: Addition (A + B)
+    A = 11;
+    B = 28;
+    ALUop = ADD;
+    #10;
+	if (ALUout == A + B)
+		$display("Test Case 1 Passed");
+	else
+		$display("Test Case 1 Failed");
+
+    // Test Case 2: Subtraction (A - B)
+    A = 55;
+    B = 32;
+    ALUop = SUB;
+    #10;
+	if (ALUout == A - B)
+		$display("Test Case 2 Passed");
+	else
+		$display("Test Case 2 Failed");
+		
+    // Test Case 3: Shift Left Logical (A << B)
+    A = 7;
+    B = 3;
+    ALUop = SLL;
+    #10;
+    assert(ALUout == (A << B)) else $display("Test Case 3 Failed");
+
+    // Test Case 4: Shift Right Logical (A >> B)
+    A = 16;
+    B = 2;
+    ALUop = SRL;
+    #10;
+    assert(ALUout == (A >> B)) else $display("Test Case 4 Failed");
+
+    // Test Case 5: Shift Right Arithmetic (A >>> B)
+    A = -16;
+    B = 3;
+    ALUop = SRA;
+    #10;
+    assert(ALUout == ($signed(A) >>> B)) else $display("Test Case 5 Failed");
+
+    // Test Case 6: Bitwise AND (A & B)
+    A = 12;
+    B = 7;
+    ALUop = AND;
+    #10;
+    assert(ALUout == (A & B)) else $display("Test Case 6 Failed");
+
+    // Test Case 7: Bitwise OR (A | B)
+    A = 12;
+    B = 7;
+    ALUop = OR;
+    #10;
+    assert(ALUout == (A | B)) else $display("Test Case 7 Failed");
+
+    // Test Case 8: Bitwise XOR (A ^ B)
+    A = 12;
+    B = 7;
+    ALUop = XOR;
+    #10;
+    assert(ALUout == (A ^ B)) else $display("Test Case 8 Failed");
+
+    // Test Case 9: Set Less Than (Signed) (A < B)
+    A = -5;
+    B = 10;
+    ALUop = SLT;
+    #10;
+    assert(ALUout == ($signed(A) < $signed(B))) else $display("Test Case 9 Failed");
+
+    // Test Case 10: Set Less Than Unsigned (A < B)
+    A = 5;
+    B = 10;
+    ALUop = SLTU;
+    #10;
+    assert(ALUout == (A < B)) else $display("Test Case 10 Failed");
+	 
+	 // Test Case 11: Branch If Equal (A = B)
+    A = 5;
+    B = 10;
+    ALUop = BEQ;
+    #10;
+    assert(ALUout == (A == B)) else $display("Test Case 10 Failed");
+	 
+	 // Test Case 11: Branch Not If Equal (A != B)
+    A = 5;
+    B = 10;
+    ALUop = BNE;
+    #10;
+    assert(ALUout == (A != B)) else $display("Test Case 10 Failed");
+	 
+	 // Test Case 12: Greater than or equal (Signed) (A >= B)
+    A = -21;
+    B = 10;
+    ALUop = BGE;
+    #10;
+    assert(ALUout == (A >= B)) else $display("Test Case 10 Failed");
+
+	 // Test Case 13: Greater than or equal (Unsigned) (A >= B)
+    A = 21;
+    B = 10;
+    ALUop = BGEU;
+    #10;
+    assert(ALUout == (A >= B)) else $display("Test Case 10 Failed");
+
+
+
+    $finish; // Finish simulation
+  end
+
+  // Clock generation
+  always #1 clk = ~clk;
+
+endmodule

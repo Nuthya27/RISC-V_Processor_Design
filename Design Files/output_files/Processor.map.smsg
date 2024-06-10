@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at Controller.sv(59): always construct contains both blocking and non-blocking assignments File: D:/Academic/Sem 5/Digital System Design/Processor Design/Design/Processor/Controller.sv Line: 59

@@ -1,0 +1,25 @@
+`timescale 1ns / 1ps
+
+module DataMemory(
+	//memory address size = 8 bits , total memory adresses = 2^8, address width =32
+	
+	input logic clk,
+	//input logic rd_en, //read enable
+	input logic wr_en, //write enable
+	input logic [7:0] addr,  //address to be written or read from
+	input logic [31:0] wr_data,  //data to be written
+	output logic [31:0] rd_data  //data read from memory address	
+
+);
+
+	//memory as an array
+	logic [31:0] data_mem[(2**8)-1:0]; //2^8 addresses of width 32
+
+	assign rd_data = data_mem[addr];
+	
+	always @(posedge clk) begin
+		if (wr_en)
+			data_mem[addr] <= wr_data;
+	end
+
+endmodule

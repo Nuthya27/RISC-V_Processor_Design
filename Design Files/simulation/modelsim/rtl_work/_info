@@ -1,0 +1,467 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/simulation/modelsim
+vAdder32
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1701374051
+!i10b 1
+!s100 >mP[Em1WQkT4b7iHocznI2
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IZa;205KDc=mW0VKzdQ07F1
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1697297689
+8D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Adder32.sv
+FD:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Adder32.sv
+!i122 13
+L0 1 10
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1701374051.000000
+!s107 D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Adder32.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles|D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Adder32.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work {+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles}
+Z9 tCvgOpt 0
+n@adder32
+vAddressDecorder
+R1
+R2
+!i10b 1
+!s100 BMiiOHBN@RjHiGoWVW8Om0
+R3
+I@Pg>>FXQU2Wb>53<?0;::2
+R4
+S1
+R0
+w1697316079
+8D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/AddressDecorder.sv
+FD:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/AddressDecorder.sv
+!i122 11
+L0 1 61
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/AddressDecorder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles|D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/AddressDecorder.sv|
+!i113 1
+R7
+R8
+R9
+n@address@decorder
+vALU
+R1
+Z10 !s110 1701374050
+!i10b 1
+!s100 7IMzE?TGmhVW><>8JQB^T3
+R3
+IQ<6TLMIMPbPShWUiBJk9f1
+R4
+S1
+R0
+w1697315257
+8D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/ALU.sv
+FD:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/ALU.sv
+!i122 3
+L0 1 57
+R5
+r1
+!s85 0
+31
+Z11 !s108 1701374050.000000
+!s107 D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/ALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles|D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/ALU.sv|
+!i113 1
+R7
+R8
+R9
+n@a@l@u
+vController
+R1
+R10
+!i10b 1
+!s100 >]F21>5dNMOF^]dLOFL3I1
+R3
+IVXRzTT:nhUDn=cFCBYiZN0
+R4
+S1
+R0
+w1701369208
+8D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Controller.sv
+FD:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Controller.sv
+!i122 0
+L0 1 69
+R5
+r1
+!s85 0
+31
+R11
+!s107 D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles|D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Controller.sv|
+!i113 1
+R7
+R8
+R9
+n@controller
+vDataExtract
+R1
+R2
+!i10b 1
+!s100 VCLCh8<8VB0P;n5:h9ZH`3
+R3
+IlL8iWa9Fmg4YjYT5SkXoa1
+R4
+S1
+R0
+w1697294379
+8D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/DataExtract.sv
+FD:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/DataExtract.sv
+!i122 8
+L0 1 40
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/DataExtract.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles|D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/DataExtract.sv|
+!i113 1
+R7
+R8
+R9
+n@data@extract
+vDataMemory
+R1
+R10
+!i10b 1
+!s100 ]PPg:iQ=jooc`mQ?>6eBh3
+R3
+IN>0WUiWcS]PPU4V]NCJgf1
+R4
+S1
+R0
+w1697300437
+8D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/DataMemory.sv
+FD:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/DataMemory.sv
+!i122 2
+L0 1 24
+R5
+r1
+!s85 0
+31
+R11
+!s107 D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/DataMemory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles|D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/DataMemory.sv|
+!i113 1
+R7
+R8
+R9
+n@data@memory
+vDataPath
+R1
+R2
+!i10b 1
+!s100 _EzOTQPe:JG[EGH0_bm`K1
+R3
+I<jV`]A7]XVg]Yzj>9J]WZ0
+R4
+S1
+R0
+w1701370272
+8D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/DataPath.sv
+FD:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/DataPath.sv
+!i122 12
+L0 1 177
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/DataPath.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles|D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/DataPath.sv|
+!i113 1
+R7
+R8
+R9
+n@data@path
+vhexdigit
+R1
+R2
+!i10b 1
+!s100 =1W`SQeA:H[O;Td]Fo2MY0
+R3
+ITIZ22`1hS^PQ7<S]:5T2@0
+R4
+S1
+R0
+w1701356811
+8D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/hexdigit.sv
+FD:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/hexdigit.sv
+!i122 14
+L0 1 121
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/hexdigit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles|D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/hexdigit.sv|
+!i113 1
+R7
+R8
+R9
+vImmediateGenerator
+R1
+R2
+!i10b 1
+!s100 EnVkFkDgY<=J1I7J=:^@?2
+R3
+IWJ329dQ3;fZnQlHNVQ@3^0
+R4
+S1
+R0
+w1696754078
+8D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/ImmediateGenerator.sv
+FD:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/ImmediateGenerator.sv
+!i122 7
+L0 1 22
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/ImmediateGenerator.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles|D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/ImmediateGenerator.sv|
+!i113 1
+R7
+R8
+R9
+n@immediate@generator
+vInstructionMemory
+R1
+R2
+!i10b 1
+!s100 oFIj9mA<kOMz^H4FVEZC<3
+R3
+IKR713IS]SGLX142^T0j8G2
+R4
+S1
+R0
+w1701369207
+8D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/InstructionMemory.sv
+FD:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/InstructionMemory.sv
+!i122 6
+L0 1 42
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/InstructionMemory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles|D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/InstructionMemory.sv|
+!i113 1
+R7
+R8
+R9
+n@instruction@memory
+vMux2
+R1
+R2
+!i10b 1
+!s100 T7VS0GolXh<SK]z?112LQ2
+R3
+IWm3a]mDL6`>oUhOKdFNj^0
+R4
+S1
+R0
+w1696916153
+8D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Mux2.sv
+FD:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Mux2.sv
+!i122 9
+L0 1 9
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Mux2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles|D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Mux2.sv|
+!i113 1
+R7
+R8
+R9
+n@mux2
+vMux3
+R1
+R2
+!i10b 1
+!s100 C2A2W2TTHC6ihdY[z_mzT1
+R3
+I1D1=eHbI:_EndMaH^dGH<1
+R4
+S1
+R0
+w1697290687
+8D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Mux3.sv
+FD:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Mux3.sv
+!i122 10
+Z12 L0 1 19
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Mux3.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles|D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/Mux3.sv|
+!i113 1
+R7
+R8
+R9
+n@mux3
+vPCadder4
+R1
+R2
+!i10b 1
+!s100 T>zfdY<GMD?<[If[a[iTK0
+R3
+I6HBoOCbcPYzj4di9Ta;b52
+R4
+S1
+R0
+w1697128462
+8D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/PCadder4.sv
+FD:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/PCadder4.sv
+!i122 5
+L0 1 8
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/PCadder4.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles|D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/PCadder4.sv|
+!i113 1
+R7
+R8
+R9
+n@p@cadder4
+vProgramCounter
+R1
+R2
+!i10b 1
+!s100 4LADj69;<@[EFBoTG[_463
+R3
+I@3X<=jU:iU=TSkSiHFN4Y2
+R4
+S1
+R0
+w1701371026
+8D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/ProgramCounter.sv
+FD:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/ProgramCounter.sv
+!i122 4
+R12
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/ProgramCounter.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles|D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/ProgramCounter.sv|
+!i113 1
+R7
+R8
+R9
+n@program@counter
+vRegisterFile
+R1
+R10
+!i10b 1
+!s100 LBR]Sa3_IR^G6D705nBTb3
+R3
+IO;m1<@<^mR?WjiXS@ngmI2
+R4
+S1
+R0
+w1701371012
+8D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/RegisterFile.sv
+FD:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/RegisterFile.sv
+!i122 1
+L0 1 39
+R5
+r1
+!s85 0
+31
+R11
+!s107 D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/RegisterFile.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles|D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/RegisterFile.sv|
+!i113 1
+R7
+R8
+R9
+n@register@file
+vtb
+R1
+!s110 1701374052
+!i10b 1
+!s100 ]74Mf^;5KAd5dm:^GeLb43
+R3
+Ign?mEfbWCz_bCW=D5jfQN0
+R4
+S1
+R0
+w1701373583
+8D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/tb.sv
+FD:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/tb.sv
+!i122 17
+L0 3 40
+R5
+r1
+!s85 0
+31
+!s108 1701374052.000000
+!s107 D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles|D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/tb.sv|
+!i113 1
+R7
+R8
+R9
+vtry
+R1
+R2
+!i10b 1
+!s100 C7gcP[EC:UXDQ=Vi=7=1f2
+R3
+II>HTXX7`_ZVjHJX1<k9d:2
+R4
+S1
+R0
+w1701374028
+8D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/try.sv
+FD:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/try.sv
+!i122 15
+L0 1 32
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/try.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles|D:/Academic/Sem 5/Digital System Design/200537F_DesignFiles/try.sv|
+!i113 1
+R7
+R8
+R9

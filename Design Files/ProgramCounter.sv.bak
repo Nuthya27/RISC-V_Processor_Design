@@ -1,0 +1,19 @@
+module ProgramCounter (
+    input wire clk,       // Clock input
+    input wire rst,     // Reset input
+    input wire [31:0] current_addr, // Input for incrementing the counter
+    output wire [31:0] next_addr // 4-bit Program Counter output
+);
+
+
+
+    always @(posedge clk or posedge reset) begin
+        if (rst) begin
+            next_addr <= 31'b0000; // Reset the counter to 0 when reset is asserted
+        else
+            next_addr <= current_addr; // Increment the counter when enable is asserted
+        end
+    end
+
+
+endmodule

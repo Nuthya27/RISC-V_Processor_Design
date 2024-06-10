@@ -1,0 +1,31 @@
+module Comparator_tb;
+
+	logic [31:0] val;
+	logic [31:0] val_inc;
+	logic [31:0] compare_N;	
+	logic c;
+	logic clk = 1'b0;
+	
+	Comparator dut(
+	 .val(val),
+	 .val_inc(val_inc),
+	 .compare_N(compare_N),
+	 .c(c)	 
+	);
+	
+	always begin
+	#5 clk = ~clk;
+	end
+
+
+	initial begin
+	 val = 32'd260;
+	 val_inc = 32'd267;
+	 compare_N =32'd9;
+	 #20; 
+	 val_inc = 32'd269;
+	 #20;  $finish;
+	end
+
+endmodule
+	
